@@ -95,10 +95,10 @@ Crea un usuario nuevo y devuelve el token (queda logueado de inmediato).
 
 ```json
 {
-  "name": "Ana",
+  "name": "Daniel Gutierrez",
   "lastName": "Pérez",
   "rut": "20.123.456-5",
-  "email": "ana@correo.cl",
+  "email": "rander@correo.cl",
   "password": "mipassword123"
 }
 ```
@@ -113,9 +113,9 @@ Crea un usuario nuevo y devuelve el token (queda logueado de inmediato).
   "user": {
     "id": "674f2a9c1e5b8d0f3a4b5c6d",
     "name": "Ana",
-    "lastName": "Pérez",
+    "lastName": "Perez",
     "rut": "20.123.456-5",
-    "email": "ana@correo.cl",
+    "email": "rander@correo.cl",
     "createdAt": "2026-10-28T03:30:00.000Z"
   },
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."

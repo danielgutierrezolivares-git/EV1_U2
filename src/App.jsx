@@ -2,6 +2,8 @@ import { HashRouter, NavLink, Navigate, Route, Routes } from 'react-router-dom'
 import Inicio from './pages/Inicio'
 import MisCompaneros from './pages/MisCompaneros'
 import Registrarme from './pages/Registrarme'
+import Publicaciones from './pages/Publicaciones'
+import CrearPublicacion from './pages/CrearPublicacion'
 
 const linkNav = ({ isActive }) =>
   `rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors ${
@@ -24,6 +26,7 @@ function App() {
               </span>
               <span className="text-lg font-bold tracking-tight">MiCompañero</span>
             </NavLink>
+
             <div className="flex items-center gap-1 overflow-x-auto">
               <NavLink to="/" className={linkNav} end>
                 Inicio
@@ -34,6 +37,12 @@ function App() {
               <NavLink to="/registrarme" className={linkNav}>
                 Registrarme
               </NavLink>
+              <NavLink to="/posts" className={linkNav}>
+                Publicaciones
+              </NavLink>
+              <NavLink to="/crear-post" className={linkNav}>
+                Crear nueva publicación
+              </NavLink>
             </div>
           </nav>
         </header>
@@ -41,8 +50,14 @@ function App() {
         <main className="mx-auto max-w-5xl px-4 py-10">
           <Routes>
             <Route path="/" element={<Inicio />} />
+            <Route path="/inicio" element={<Inicio />} />
             <Route path="/mis-companeros" element={<MisCompaneros />} />
             <Route path="/registrarme" element={<Registrarme />} />
+            <Route path="/registro" element={<Registrarme />} />
+
+            <Route path="/posts" element={<Publicaciones />} />
+            <Route path="/crear-post" element={<CrearPublicacion />} />
+
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

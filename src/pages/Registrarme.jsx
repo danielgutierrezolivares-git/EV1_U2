@@ -133,6 +133,8 @@ function Registrarme() {
             value={rut}
             onChange={(e) => setRut(e.target.value)}
             className={inputClass}
+            pattern="[0-9]{1,2}(\.[0-9]{3}){2}-[0-9kK]"
+            title="Ingresa el RUT con puntos y guion, por ejemplo 12.345.678-9"
             required
           />
           <p className="mt-1 text-xs text-neutral-400">

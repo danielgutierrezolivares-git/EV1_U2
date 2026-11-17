@@ -85,20 +85,28 @@ function MisCompaneros() {
               : `${usuarios.length} ${usuarios.length === 1 ? 'compañero registrado' : 'compañeros registrados'} en la plataforma`}
           </p>
         </div>
-        <div className="relative w-full sm:w-72">
-          <svg
-            className="pointer-events-none absolute top-1/2 left-3.5 h-4 w-4 -translate-y-1/2 text-neutral-400"
-            fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+          <div className="relative sm:w-72">
+            <svg
+              className="pointer-events-none absolute top-1/2 left-3.5 h-4 w-4 -translate-y-1/2 text-neutral-400"
+              fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            <input
+              type="search"
+              value={busqueda}
+              onChange={(e) => setBusqueda(e.target.value)}
+              placeholder="Buscar por nombre, email o RUT…"
+              className="w-full rounded-full border border-neutral-300 bg-white py-2.5 pr-4 pl-10 text-sm text-neutral-900 placeholder-neutral-400 transition-colors outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20"
+            />
+          </div>
+          <Link
+            to="/registrarme"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-violet-500/20 transition-opacity hover:opacity-90"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-          </svg>
-          <input
-            type="search"
-            value={busqueda}
-            onChange={(e) => setBusqueda(e.target.value)}
-            placeholder="Buscar por nombre, email o RUT…"
-            className="w-full rounded-full border border-neutral-300 bg-white py-2.5 pr-4 pl-10 text-sm text-neutral-900 placeholder-neutral-400 transition-colors outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20"
-          />
+            Registrarme
+          </Link>
         </div>
       </header>
 
